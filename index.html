@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>MarkEdit | Markdown Editor</title>
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Marked js -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="body-wrapper">
+        <div class="taskbar"> <!-- Taskbar -->
+            <div class="actions">
+                <span id="bold"><b>B</b></span>
+                <span id="italics"><i>i</i></span>
+                <span id="underline"><u>u</u></span>
+                <span id="strike-through"><s>s</s></span>
+                <span id="anchor">a</span>
+                <span id="break">br</span>
+                <span id="list">li</span>
+                <span id="heading-1">h1</span>
+                <span id="heading-2">h2</span>
+                <span id="heading-3">h3</span>
+                <span id="heading-4">h4</span>
+                <span id="heading-5">h5</span>
+                <span id="heading-6">h6</span>
+            </div>
+            <div class="socials">
+                <a href="www.linkedin.com/in/abraham-bishop"><i class="fa-brands fa-linkedin" style="color: blue;"></i></a>
+                <a href="https://github.com/CrypticCodeDeveloper/MarkEdit"><i class="fa-brands fa-github" style="color: purple;"></i></a>
+            </div>
+        </div>
+        <div class="container">
+            <textarea id="editor" placeholder="Write your markdown here..."></textarea>
+            <div id="preview">
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

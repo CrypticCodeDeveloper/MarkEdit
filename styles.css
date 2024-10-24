@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    height: 100vh;
+    color: white !important;
+}
+
+.body-wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100%;
+}
+
+.taskbar {
+    background-color: #28292D;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    width: 100%;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+.actions{
+    justify-self: flex-start;
+    width: 140px;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+}
+#editor{
+    background-color: #28292D;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    resize: none;
+    height: 100%;
+    border-right: 1px solid white;
+    outline: none;
+    &::placeholder{
+        color: white;
+    }
+}
+.socials{
+    margin-right: 10px;
+}
+.socials i{
+    font-size: 30px;
+    margin: 0 5px;
+    transform: rotate(-10deg);
+    transition: all 400ms;
+}
+.socials i:hover{
+        transform: rotate(0deg);
+        scale: 1.1;
+}
+#preview {
+    background-color: #1F2024;
+    padding: 10px 20px;
+    overflow-y: auto;
+    height: 100%;
+    /* white-space: pre-wrap; */
+}
+.actions{
+    display: flex;
+}
+.actions span{
+    font-size: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid white;
+}
+.actions span:hover{
+    background-color: gray;
+}
+/* Links */
+
+a {
+    color: #4183C4;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3578E5;
+}
+
+.taskbar .actions {
+    width: 200px;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    overflow-x: scroll;
+    scrollbar-width: thin;
+}
+
+.taskbar .actions::-webkit-scrollbar {
+    width: 8px;
+}
+
+@media (max-width: 768px) {
+    .body-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    #editor, #preview {
+        height: auto;
+    }
+    #editor{
+        border-right: none;
+        border-bottom: 1px solid white;
+        min-height: 60vh;
+    }
+    .taskbar .actions {
+        width: 180px;
+    }
+}
+/* Markdowns */
+h1,h2,h3,h4,h5,h6 {
+    margin: 8px 0;
+}
